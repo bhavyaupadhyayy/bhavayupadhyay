@@ -1,0 +1,36 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bhavya Upadhyay - Data Engineer and ML Practitioner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0b1620"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#58A6FF"/><stop offset="0.55" stop-color="#22D3EE"/><stop offset="1" stop-color="#34D399"/></linearGradient>
+    <radialGradient id="ambient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo_source" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#58A6FF" stop-opacity="0.45"/><stop offset="1" stop-color="#58A6FF" stop-opacity="0"/></radialGradient><radialGradient id="halo_ingest" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#38BDF8" stop-opacity="0.45"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient><radialGradient id="halo_stream" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#38BDF8" stop-opacity="0.45"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient><radialGradient id="halo_warehouse" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.45"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient><radialGradient id="halo_serve" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#34D399" stop-opacity="0.45"/><stop offset="1" stop-color="#34D399" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#1b2230"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="16" fill="url(#dots)" opacity="0.5"/>
+  <ellipse cx="975" cy="150" rx="240" ry="170" fill="url(#ambient)"/>
+
+  <text x="72" y="120" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="58" font-weight="700" fill="#E6EDF3" letter-spacing="0.5">Bhavya Upadhyay</text>
+  <rect x="74" y="138" width="232" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="74" y="190" font-family="Consolas, monospace" font-size="27" font-weight="600" fill="#56C7E8">Data Engineer &amp; ML Practitioner</text>
+  <text x="74" y="228" font-family="Consolas, monospace" font-size="17" fill="#8B949E">MDS @ UC Irvine  ·  ex-Data Engineer @ TCS (Air Canada)</text>
+  <text x="74" y="258" font-family="Consolas, monospace" font-size="15" fill="#5a6573">Python · SQL · AWS · Airflow · dbt · Snowflake</text>
+
+  <g stroke="url(#edge)" stroke-width="2.6" stroke-linecap="round" fill="none" opacity="0.7"><path d="M832 150 C 878.0 150, 878.0 92, 924 92"/><path d="M832 150 C 878.0 150, 878.0 208, 924 208"/><path d="M924 92 C 970.0 92, 970.0 150, 1016 150"/><path d="M924 208 C 970.0 208, 970.0 150, 1016 150"/><path d="M1016 150 C 1062.0 150, 1062.0 150, 1108 150"/></g>
+  <circle cx="832" cy="150" r="30" fill="url(#halo_source)"/><circle cx="924" cy="92" r="30" fill="url(#halo_ingest)"/><circle cx="924" cy="208" r="30" fill="url(#halo_stream)"/><circle cx="1016" cy="150" r="30" fill="url(#halo_warehouse)"/><circle cx="1108" cy="150" r="30" fill="url(#halo_serve)"/>
+  <circle cx="832" cy="150" r="16" fill="#0b0f16" stroke="#58A6FF" stroke-width="2.6"/><circle cx="832" cy="150" r="3.4" fill="#58A6FF"/><circle cx="924" cy="92" r="16" fill="#0b0f16" stroke="#38BDF8" stroke-width="2.6"/><circle cx="924" cy="92" r="3.4" fill="#38BDF8"/><circle cx="924" cy="208" r="16" fill="#0b0f16" stroke="#38BDF8" stroke-width="2.6"/><circle cx="924" cy="208" r="3.4" fill="#38BDF8"/><circle cx="1016" cy="150" r="16" fill="#0b0f16" stroke="#22D3EE" stroke-width="2.6"/><circle cx="1016" cy="150" r="3.4" fill="#22D3EE"/><circle cx="1108" cy="150" r="16" fill="#0b0f16" stroke="#34D399" stroke-width="2.6"/><circle cx="1108" cy="150" r="3.4" fill="#34D399"/>
+  <g font-family="Consolas, monospace" font-size="11.5" fill="#8B949E" text-anchor="middle"><text x="832" y="114">source</text><text x="924" y="62">ingest</text><text x="924" y="244">stream</text><text x="1016" y="114">warehouse</text><text x="1108" y="114">serve</text></g>
+</svg>
