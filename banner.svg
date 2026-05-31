@@ -1,0 +1,71 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bhavya Upadhyay - Data Engineer and ML Practitioner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#0b1626"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E9EF7"/>
+      <stop offset="1" stop-color="#29B5E8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2E9EF7" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2E9EF7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#1b2230"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="16" fill="url(#dots)" opacity="0.6"/>
+  <circle cx="980" cy="150" r="220" fill="url(#glow)"/>
+
+  <!-- left: identity -->
+  <text x="72" y="120" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="58" font-weight="700" fill="#E6EDF3" letter-spacing="0.5">Bhavya Upadhyay</text>
+  <rect x="74" y="138" width="232" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="74" y="190" font-family="'Fira Code', Consolas, monospace" font-size="27" font-weight="600" fill="#58A6FF">Data Engineer &amp; ML Practitioner</text>
+  <text x="74" y="228" font-family="'Fira Code', Consolas, monospace" font-size="17" fill="#8B949E">MDS @ UC Irvine  ·  ex-Data Engineer @ TCS (Air Canada)</text>
+  <text x="74" y="258" font-family="'Fira Code', Consolas, monospace" font-size="15" fill="#5a6573">Python · SQL · AWS · Airflow · dbt · Snowflake</text>
+
+  <!-- right: pipeline DAG motif -->
+  <g stroke="#2b3543" stroke-width="2.5" fill="none">
+    <path d="M832 150 C 876 150, 876 96, 920 96"/>
+    <path d="M832 150 C 876 150, 876 204, 920 204"/>
+    <path d="M920 96 C 968 96, 968 150, 1016 150"/>
+    <path d="M920 204 C 968 204, 968 150, 1016 150"/>
+    <path d="M1016 150 H 1108"/>
+  </g>
+
+  <!-- animated data packet along the main path (degrades gracefully to static if stripped) -->
+  <circle r="4" fill="#29B5E8" filter="url(#soft)">
+    <animateMotion dur="3.2s" repeatCount="indefinite" path="M832 150 C 876 150, 876 96, 920 96 C 968 96, 968 150, 1016 150 H 1108"/>
+  </circle>
+
+  <g filter="url(#soft)">
+    <circle cx="832" cy="150" r="17" fill="#0d1117" stroke="url(#accent)" stroke-width="2.5"/>
+    <circle cx="920" cy="96"  r="17" fill="#0d1117" stroke="url(#accent)" stroke-width="2.5"/>
+    <circle cx="920" cy="204" r="17" fill="#0d1117" stroke="url(#accent)" stroke-width="2.5"/>
+    <circle cx="1016" cy="150" r="17" fill="#0d1117" stroke="url(#accent)" stroke-width="2.5"/>
+    <circle cx="1108" cy="150" r="17" fill="#0d1117" stroke="url(#accent)" stroke-width="2.5"/>
+  </g>
+  <g fill="#58A6FF">
+    <circle cx="832" cy="150" r="4"/>
+    <circle cx="920" cy="96"  r="4"/>
+    <circle cx="920" cy="204" r="4"/>
+    <circle cx="1016" cy="150" r="4"/>
+    <circle cx="1108" cy="150" r="4"/>
+  </g>
+  <g font-family="'Fira Code', Consolas, monospace" font-size="11" fill="#5a6573" text-anchor="middle">
+    <text x="832" y="186">source</text>
+    <text x="920" y="74">ingest</text>
+    <text x="920" y="226">stream</text>
+    <text x="1016" y="186">warehouse</text>
+    <text x="1108" y="186">serve</text>
+  </g>
+</svg>
