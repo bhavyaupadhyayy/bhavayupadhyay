@@ -2,10 +2,13 @@
 
 **Data Engineer & ML practitioner** · Master of Data Science @ UC Irvine · ex-Data Engineer @ TCS (Air Canada)
 
-I build end-to-end data and ML systems: production ETL pipelines, LLM/RAG applications, and deep-learning models served behind APIs. At TCS I shipped AWS ETL pipelines processing 10M+ records/month for Air Canada operations. Now completing my MDS at UC Irvine on a full merit scholarship.
+I build end-to-end data and ML systems: production ETL pipelines, LLM/RAG applications, and deep-learning models served behind APIs. At TCS I shipped AWS Lambda ETL pipelines processing 10M+ flight and booking records monthly for Air Canada operations, cutting data latency by 50% and improving SLA compliance to 99.9%. Now completing my MDS at UC Irvine on a full merit scholarship, where I also work as a Data Analyst at the Graduate Division building retention models and KPI dashboards across 20+ programs.
 
-- 🔭 Currently: building production data systems, targeting full-time Data Engineering / ML roles
+Most recently I built **Flightline**, a production-grade flight data pipeline ingesting US BTS on-time performance data via Airflow DAGs into Snowflake, modeled across staging/fact/dimension/aggregate layers in dbt with 26/26 tests passing, CI linting SQL with sqlfluff and running dbt builds on every push, with a live Streamlit dashboard serving carrier on-time rates and worst-route delay analytics.
+
+- 🔭 Targeting full-time Data Engineering and ML Engineering roles (available Jan 2027)
 - ⚙️ Strongest in Python, SQL, AWS, Airflow, dbt, and Snowflake
+- 🌱 Currently adding Kafka streaming and OpenSky live flight positions to Flightline
 - 📫 officiallybhavya@gmail.com
 
 ---
