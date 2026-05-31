@@ -14,10 +14,10 @@ I build end-to-end data and ML systems: production ETL pipelines, LLM/RAG applic
 
 | Project | What it does | Stack |
 |---------|--------------|-------|
-| **[Flightline](https://github.com/bhavayupadhyay/Flightline-End-to-End-Flight-Data-Pipeline)** | Production flight data pipeline: BTS batch ingestion → Snowflake → dbt (26/26 tests passing) → live Streamlit dashboard; CI lints SQL and runs dbt build on every push | Airflow · dbt · Snowflake · Kafka · Docker · GitHub Actions |
-| **[Signal Miner](https://github.com/bhavayupadhyay/saas-signal-miner)** | LLM pipeline that turns unstructured market data from 250+ sources into clean, structured records | Python · LangChain · RAG · Supabase · Docker |
-| **[Duplicate Detection in Job Postings](https://github.com/bhavayupadhyay/bayesian-duplicate-detection)** | Semantic deduplication over 250K+ postings; precision lifted 68% → 92%, ~3x faster matching | Sentence Transformers · Milvus · RAG |
-| **[Skin Lesion Classification](https://github.com/bhavayupadhyay/skin-lesion-classification)** | EfficientNet-B0 + CBAM attention on ISIC 2019 (8 classes), ablation studies, Grad-CAM, served via FastAPI | PyTorch · FastAPI · Grad-CAM |
+| **[Flightline](https://github.com/bhavyaupadhyayy/Flightline-End-to-End-Flight-Data-Pipeline)** | Production flight data pipeline: BTS batch ingestion → Snowflake → dbt (26/26 tests passing) → live Streamlit dashboard; CI lints SQL and runs dbt build on every push | Airflow · dbt · Snowflake · Kafka · Docker · GitHub Actions |
+| **[Signal Miner](https://github.com/bhavyaupadhyayy/saas-signal-miner)** | LLM pipeline that turns unstructured market data from 250+ sources into clean, structured records | Python · LangChain · RAG · Supabase · Docker |
+| **[Duplicate Detection in Job Postings](https://github.com/bhavyaupadhyayy/bayesian-duplicate-detection)** | Semantic deduplication over 250K+ postings; precision lifted 68% → 92%, ~3x faster matching | Sentence Transformers · Milvus · RAG |
+| **[Skin Lesion Classification](https://github.com/bhavyaupadhyayy/skin-lesion-classification)** | EfficientNet-B0 + CBAM attention on ISIC 2019 (8 classes), ablation studies, Grad-CAM, served via FastAPI | PyTorch · FastAPI · Grad-CAM |
 
 ---
 
