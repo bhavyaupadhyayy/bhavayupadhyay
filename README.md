@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="banner_flow.svg" alt="Bhavya Upadhyay - Data Engineer & ML Practitioner" width="100%" />
+  <img src="banner.svg" alt="Bhavya Upadhyay - Data Engineer & ML Practitioner" width="100%" />
 </div>
 
 <div align="center">
