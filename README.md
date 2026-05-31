@@ -20,10 +20,10 @@
 At **TCS (Air Canada)** I shipped AWS Lambda ETL pipelines processing **10M+ records/month**, cutting data latency by 50% and improving pipeline SLA compliance to 99.9%. Now completing my **Master of Data Science at UC Irvine** on a full merit scholarship, while working as a Data Analyst at the Graduate Division building retention models and KPI dashboards across 20+ programs.
 
 ```yaml
-role:        Data Engineer / ML Engineer  (full-time, available Jan 2027)
-strongest:   Python · SQL · AWS · Airflow · dbt · Snowflake
-building:    Kafka streaming + OpenSky live positions for Flightline
-contact:     officiallybhavya@gmail.com
+Role:        Data Engineer / ML Engineer  (full-time, available Jan 2027)
+Strongest:   Python · SQL · AWS · Airflow · dbt · Snowflake
+Building:    Kafka streaming + OpenSky live positions for Flightline
+Contact:     officiallybhavya@gmail.com
 ```
 
 ---
