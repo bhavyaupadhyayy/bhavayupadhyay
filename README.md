@@ -15,48 +15,54 @@
 
 ## 🧭 About
 
-**Data Engineer & ML practitioner** building end-to-end data and ML systems: production ETL pipelines, LLM/RAG applications, and deep-learning models served behind APIs.
+**Data Engineer & ML practitioner** who builds end-to-end data and ML systems and is honest about how they're built. I work across the whole stack: streaming and batch ingestion, tested transformation pipelines, ML models with real evaluation, and multi-agent LLM systems with grounded, source-attributed output.
 
-At **TCS (Air Canada)** I shipped AWS Lambda ETL pipelines processing **10M+ records/month**, cutting data latency by 50% and improving pipeline SLA compliance to 99.9%. Now completing my **Master of Data Science at UC Irvine** on a full merit scholarship, while working as a Data Analyst at the Graduate Division building retention models and KPI dashboards across 20+ programs.
+At **TCS (Air Canada)** I shipped AWS Lambda ETL pipelines processing **10M+ records/month**, cutting data latency by 50% and lifting pipeline SLA compliance to 99.9%. Now completing my **Master of Data Science at UC Irvine** on a full merit scholarship, while working as a Data Analyst at the Graduate Division building retention models and KPI dashboards across 20+ programs.
+
+What I care about: pipelines that survive real, messy data; ML results reported with their limitations attached; and LLM systems whose claims you can actually trace back to a source.
 
 ```yaml
 Role:        Data Engineer / ML Engineer  (full-time, available Jan 2027)
 Strongest:   Python · SQL · AWS · Airflow · dbt · Snowflake
-Building:    Kafka streaming + OpenSky live positions for Flightline
+Building:    EDGAR-X — multi-agent financial intelligence on real SEC data
 Contact:     officiallybhavya@gmail.com
 ```
 
 ---
 
-## ✈️ Flightline — How It Works
+## 📊 EDGAR-X — How It Works
 
-My most recent build: a production flight-data pipeline. Diagram is the real architecture.
+My current build: a multi-agent financial intelligence system on real SEC data. The diagram is the actual built architecture (Layers 1–4 of a 7-layer design; deployment layers are planned).
 
 ```mermaid
 flowchart LR
-    A["US BTS<br/>On-Time Data"] -->|Airflow DAG| C[("Snowflake<br/>Raw")]
-    B["OpenSky API"] -->|OAuth2 + Kafka| C
-    C -->|dbt| D["Staging"]
-    D --> E["Fact + Dimension"]
-    E --> F["Aggregates<br/>26/26 tests"]
-    F --> G(["Streamlit<br/>Dashboard"])
+    A["SEC EDGAR<br/>filings + XBRL"] -->|checkpointed backfill| C[("Snowflake<br/>Raw")]
+    B["FRED<br/>macro data"] -->|backfill| C
+    C -->|dbt · 75 tests| D["Staging →<br/>Marts"]
+    D --> E["XGBoost<br/>ranked screen<br/>AUC 0.726"]
+    D --> F["LLM agents<br/>grounded memos"]
+    F --> G(["LLM-as-judge<br/>evaluation"])
 
     classDef src fill:#161b22,stroke:#58A6FF,color:#E6EDF3;
     classDef core fill:#0d3b5c,stroke:#29B5E8,color:#E6EDF3;
     classDef out fill:#1a3326,stroke:#3fb950,color:#E6EDF3;
     class A,B src;
-    class C,D,E,F core;
-    class G out;
+    class C,D,E core;
+    class F,G out;
 ```
 
-> CI lints SQL with `sqlfluff` and runs `dbt build` against an ephemeral schema on every push. Idempotent partition-delete-before-COPY loads prevent drift on reruns.
+> Real data on **498 S&P 500 companies** (7,863 XBRL fundamentals rows, 4,758 parsed 10-Ks). dbt tests caught four real extraction bugs. Agents use **code-supplied provenance** — the model can't fabricate a citation — and every memo is independently scored.
 
 ---
 
 ## 🚀 Featured Projects
 
+### 📊 [EDGAR-X — Multi-Agent Financial Intelligence System](https://github.com/bhavyaupadhyayy/EDGAR-X)
+Ingests real **SEC EDGAR** + **FRED** data for 498 S&P 500 companies into **Snowflake**, transforms it through a tested **dbt** pipeline, trains a revenue-direction model, and runs **LLM agents** that write source-grounded research memos — each scored by an automated judge. Honestly documented: Layers 1–4 of 7 built, deployment planned.
+`Python` · `Kafka` · `Airflow` · `dbt` · `Snowflake` · `XGBoost` · `Anthropic API`
+
 ### ✈️ [Flightline — End-to-End Flight Data Pipeline](https://github.com/bhavyaupadhyayy/Flightline-End-to-End-Flight-Data-Pipeline)
-Batch ingestion of US BTS data → **Snowflake** → **dbt** (26/26 tests) → live **Streamlit** dashboard, orchestrated with **Airflow**, with a Kafka streaming path for live flight positions.
+Batch ingestion of US BTS data → **Snowflake** → **dbt** (26/26 tests) → live **Streamlit** dashboard, orchestrated with **Airflow**, with a working **Kafka** streaming path for live flight positions from the OpenSky API. CI lints SQL with `sqlfluff` and runs `dbt build` on every push.
 `Airflow` · `dbt` · `Snowflake` · `Kafka` · `Docker` · `GitHub Actions`
 
 ### 🛰️ [Signal Miner — LLM Market Intelligence](https://github.com/bhavyaupadhyayy/saas-signal-miner)
@@ -99,6 +105,7 @@ EfficientNet-B0 + CBAM attention on ISIC 2019 (8 classes); ablation across 4 var
 <p>
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
+<img src="https://img.shields.io/badge/XGBoost-006600?style=flat-square&logo=xgboost&logoColor=white" />
 <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
 </p>
@@ -115,11 +122,3 @@ EfficientNet-B0 + CBAM attention on ISIC 2019 (8 classes); ablation across 4 var
 <div align="center">
 <sub>Building reliable data systems, one pipeline at a time.</sub>
 </div>
-
-<!--
-ADD LATER once Flightline v2 commits fill out your graph. A stats card looks
-great, but only when the numbers help you. Today your contribution count is
-your weakest stat, so adding it now advertises the wrong thing:
-
-![Stats](https://github-readme-stats.vercel.app/api?username=bhavyaupadhyayy&show_icons=true&hide_border=true&count_private=true)
--->
