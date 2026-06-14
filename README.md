@@ -24,7 +24,7 @@ What I care about: pipelines that survive real, messy data; ML results reported 
 ```yaml
 Role:        Data Engineer / ML Engineer  (full-time, available Jan 2027)
 Strongest:   Python · SQL · AWS · Airflow · dbt · Snowflake
-Building:    EDGAR-X — multi-agent financial intelligence on real SEC data
+Built:       EDGAR-X — multi-agent financial intelligence on real SEC data
 Contact:     officiallybhavya@gmail.com
 ```
 
@@ -32,7 +32,7 @@ Contact:     officiallybhavya@gmail.com
 
 ## 📊 EDGAR-X — How It Works
 
-My current build: a multi-agent financial intelligence system on real SEC data. The diagram is the actual built architecture (Layers 1–4 of a 7-layer design; deployment layers are planned).
+A 7-layer multi-agent financial intelligence system on real SEC data. The diagram is the actual built architecture. **[🔴 Try the live demo →](https://edgar-x-26rm39rzy6c8fjzyb9pxdt.streamlit.app)**
 
 ```mermaid
 flowchart LR
@@ -42,24 +42,26 @@ flowchart LR
     D --> E["XGBoost<br/>ranked screen<br/>AUC 0.726"]
     D --> F["LLM agents<br/>grounded memos"]
     F --> G(["LLM-as-judge<br/>evaluation"])
+    E --> H(["Live Streamlit<br/>dashboard"])
+    G --> H
 
     classDef src fill:#161b22,stroke:#58A6FF,color:#E6EDF3;
     classDef core fill:#0d3b5c,stroke:#29B5E8,color:#E6EDF3;
     classDef out fill:#1a3326,stroke:#3fb950,color:#E6EDF3;
     class A,B src;
     class C,D,E core;
-    class F,G out;
+    class F,G,H out;
 ```
 
-> Real data on **498 S&P 500 companies** (7,863 XBRL fundamentals rows, 4,758 parsed 10-Ks). dbt tests caught four real extraction bugs. Agents use **code-supplied provenance** — the model can't fabricate a citation — and every memo is independently scored.
+> Real data on **498 S&P 500 companies** (7,863 XBRL fundamentals rows, 4,758 parsed 10-Ks). dbt tests caught four real extraction bugs. Agents use **code-supplied provenance** — the model can't fabricate a citation — and every memo is independently scored. The live dashboard runs free and permanently on a static snapshot; cloud infrastructure is written as deployment-ready Terraform/Kubernetes (not deployed, to avoid cost).
 
 ---
 
 ## 🚀 Featured Projects
 
-### 📊 [EDGAR-X — Multi-Agent Financial Intelligence System](https://github.com/bhavyaupadhyayy/EDGAR-X)
-Ingests real **SEC EDGAR** + **FRED** data for 498 S&P 500 companies into **Snowflake**, transforms it through a tested **dbt** pipeline, trains a revenue-direction model, and runs **LLM agents** that write source-grounded research memos — each scored by an automated judge. Honestly documented: Layers 1–4 of 7 built, deployment planned.
-`Python` · `Kafka` · `Airflow` · `dbt` · `Snowflake` · `XGBoost` · `Anthropic API`
+### 📊 [EDGAR-X — Multi-Agent Financial Intelligence System](https://github.com/bhavyaupadhyayy/EDGAR-X) · [🔴 Live demo](https://edgar-x-26rm39rzy6c8fjzyb9pxdt.streamlit.app)
+A 7-layer system that ingests real **SEC EDGAR** + **FRED** data for 498 S&P 500 companies into **Snowflake**, transforms it through a tested **dbt** pipeline, trains a revenue-direction model, and runs **LLM agents** that write source-grounded research memos — each scored by an automated judge — with a self-improvement loop, a live dashboard, and deployment-ready cloud IaC. Honestly documented throughout: what's built, what's deployed, and what would cost money to run.
+`Python` · `Kafka` · `Airflow` · `dbt` · `Snowflake` · `XGBoost` · `Anthropic API` · `Terraform` · `Kubernetes`
 
 ### ✈️ [Flightline — End-to-End Flight Data Pipeline](https://github.com/bhavyaupadhyayy/Flightline-End-to-End-Flight-Data-Pipeline)
 Batch ingestion of US BTS data → **Snowflake** → **dbt** (26/26 tests) → live **Streamlit** dashboard, orchestrated with **Airflow**, with a working **Kafka** streaming path for live flight positions from the OpenSky API. CI lints SQL with `sqlfluff` and runs `dbt build` on every push.
@@ -97,6 +99,8 @@ EfficientNet-B0 + CBAM attention on ISIC 2019 (8 classes); ablation across 4 var
 <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white" />
 <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
 <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
 </p>
